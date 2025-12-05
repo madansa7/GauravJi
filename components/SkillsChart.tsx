@@ -19,14 +19,14 @@ const SkillsChart: React.FC = () => {
           <span className="w-2 h-8 bg-blue-600 rounded-full"></span>
           Top Skills
         </h3>
-        {/* Increased height to 400px to ensure labels are not hidden */}
+        {/* Container height ensures chart has room */}
         <div className="h-[400px] w-full">
           <ResponsiveContainer width="100%" height="100%">
-            <RadarChart cx="50%" cy="50%" outerRadius="70%" data={TOP_SKILLS_DATA}>
+            <RadarChart cx="50%" cy="50%" outerRadius="55%" data={TOP_SKILLS_DATA}>
               <PolarGrid stroke="#e2e8f0" />
               <PolarAngleAxis 
                 dataKey="subject" 
-                tick={{ fill: '#475569', fontSize: 13, fontWeight: 600 }} 
+                tick={{ fill: '#475569', fontSize: 12, fontWeight: 600 }} 
               />
               <PolarRadiusAxis angle={30} domain={[0, 100]} tick={false} axisLine={false} />
               <Radar
